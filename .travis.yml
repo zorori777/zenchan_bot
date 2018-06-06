@@ -1,2 +1,10 @@
 language: ruby
+rvm: 2.5.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: 1+9i9h2d0d5yRTkOBB6hBM8KM9vXdPsYJZ+sBxBIh9yvWQI2jE4dNAsExcIPzzsVD+/ka4NDP/3By3tpqqyA/7A8hCbKyj/j6f12LWE3PUGUA0V0kVnNg2bemuuZl5XlO2seAIyukC0SMGbXnRuPD+ncnrhv2dFn7C5aYNOW+GCpAOrLsIJh6UMD6YOyfeMQYi+GXejCa4rL3d1VVPSy8mEXwcOxW2kq2M1ATCTU4NLHfjWZFNTOPiNniyEW80wG7hH7M8dOgfrucS85NEyPNKQrCvjecZch44jR5oao0R+KSpSv+IKfOYvsXZgZHAbc9gOaWt6SzdUMEZM+XfnngqTPk5cFEd+qqsm5A5vephnU4C9VGNV1oZB/h1sE1S7qJpFY5PEsBjArdsn9q8tlRLNHs2xsFEVxNinEM702w4vaAoe5l8u+EMsJx/8rLniBqEaAiNFXfMBtPSMeaeLp6WqySlkXcUip72YtTMGcj7gt/zMs6+B5PvWnz+/1kYsZMERgZoZ2Gms9kbenr8MBqZLt5/xP/nRW7q18InYn7lEpZEbCrMVNTjbXdrhrZbbylAIx9jVHJ8hGH+jRbncTYUI+upKzhmWvVuMVYi1xlR9vFYdUtWX1G3lO3h8wmqwI5xc9uE2zPzQkdH527qNJi9t7jgtXh6JsCjsqJDPQVd8=
+  app: zenchanbot
+  on:
+    repo: zorori777/zenchan_bot
 cache: bundler
