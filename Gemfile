@@ -14,6 +14,8 @@ gem 'webpacker'
 gem 'bootsnap', '>= 1.1.0', require: false
 # CI
 gem 'travis'
+# line_bot_sdk
+gem 'line-bot-api'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
