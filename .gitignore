@@ -31,7 +31,6 @@ yarn-debug.log*
 .yarn-integrity
 
 /vendor
-/bin
 /lib
 /test
 public/
