@@ -21,9 +21,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
-
   # rubocop
   gem 'rubocop', require: false
+  gem "pre-commit", require: false
 end
 
 group :development do
