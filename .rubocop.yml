@@ -1,0 +1,330 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'test/test_helper.rb'
+    - 'vendor/**/*'
+    - '**/Rakefile'
+    - '**/Gemfile'
+    - '**/config.ru'
+    - '**/*/schema.rb'
+    - 'node_modules/**/*'
+  TargetRubyVersion: 2.5.1
+  TargetRailsVersion: 5.2
+  DisplayCopNames: true
+
+# Rails
+Rails:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: false # active_hashと相性が悪い
+
+### Metrics
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+# 1行の長さ
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+# Moduleの長さ
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+### Style
+# alias_method両方可能
+Style/Alias:
+  Enabled: false
+
+# 日本語コメントを許可
+Style/AsciiComments:
+  Enabled: false
+
+# 文字列展開が不要なときでもダブルクオートで囲むことを許可
+Style/StringLiterals:
+  Enabled: false
+
+# クラスやモジュールにドキュメント用のコメントがないことを許可
+Style/Documentation:
+  Enabled: false
+
+# !! 許可
+Style/DoubleNegation:
+  Enabled: false
+
+# 空のメソッドは1行で書けとか言われるけどどっちでも良い
+Style/EmptyMethod:
+  Enabled: false
+
+# andとorの禁止。'and return'を'&& return'に置き換えると
+# returnの後に戻り値を書いたとき構文エラーになるため、一旦falseに
+Style/AndOr:
+  Enabled: false
+
+# 'TODO: 'などの書き方が間違っているものを検出
+Style/CommentAnnotation:
+  Enabled: true
+
+# ネストしたクラス(モジュール)の宣言の仕方を選択
+# 特にrubocopでは制限しない
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# String#% 許可
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/FormatString:
+  Enabled: false
+
+# ハッシュの不要な{}は入れない
+Style/BracesAroundHashParameters:
+  Enabled: false # 可読性のために入れたい場合もある
+
+# 複数行のときはstabby lambda使うなを許可
+Style/Lambda:
+  Enabled: false
+
+# ケツカンマを許可しない
+Style/TrailingCommaInArguments:
+  Enabled: true
+
+# 不要なreturnを許可しない
+Style/RedundantReturn:
+  Enabled: true
+
+# 100_000などとする桁数
+Style/NumericLiterals:
+  MinDigits: 7
+
+# Proc.new vs procどちらも可能
+Style/Proc:
+  Enabled: false
+
+# frozen_string_literal しつつ .freeze 可能
+Style/RedundantFreeze:
+  Enabled: false
+
+# rescue nilは認める
+Style/RescueModifier:
+  Enabled: false
+
+# 要素2つの配列をいちいち%w記法で書く
+Style/WordArray:
+  MinSize: 3
+
+# イテレーションの中でifを可能
+Style/Next:
+  Enabled: false
+
+# 不要なselfを省く
+Style/RedundantSelf:
+  Enabled: true
+
+# is_a?を使うかkind_of?を使うか制限する
+Style/ClassCheck:
+  Enabled: true
+
+# has_key?ではなくkey?を使う
+Style/PreferredHashMethods:
+  Enabled: true
+
+# 不要なbeginは許可しない
+Style/RedundantBegin:
+  Enabled: true
+
+# ケツカンマを許可しない
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+
+# ハッシュのキー指定する文字列はシングルクオートを使う
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+
+# num == 0 って書いたら num.zero? とか怒られるので
+Style/NumericPredicate:
+  Enabled: false
+
+# 新しいハッシュ記法を使う
+Style/HashSyntax:
+  Enabled: true
+
+# symbol arrayは、%iを使うことを推奨するが、2,3個なら愚直に書いてもいいと思うのだ
+Style/SymbolArray:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/MultipleComparison:
+  # a == :a || a == :b とかの条件の場合に、 Array#include?を使おう、という提案。
+  # ||条件の数が２つぐらいであれば、arrayよりも||のほうが可読性高い場合があるきがしたので、falseに
+  Enabled: false
+
+Style/UnneededInterpolation:
+  # "#{}"を.to_sでやれるときはそうしよう、という指摘。
+  # "#{}"の中に処理が入っていた場合に、().to_sとかしようとするけど、それなら"#{}"のままのほうが可読性が高いのでは
+  Enabled: false
+
+Style/PreferredHashMethods:
+  Enabled: false
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+### Layout
+# クラス宣言の前後の改行を許可しない
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+# case-when文のインデント
+Layout/CaseIndentation:
+  Enabled: true
+
+# hashのアラインメントを揃える
+Layout/AlignHash:
+  Enabled: true
+
+# ファイルの最後の空行を許可しない
+Layout/TrailingBlankLines:
+  Enabled: true
+
+# コメントの前の2スペースを許可する
+Layout/ExtraSpacing:
+  Enabled: false
+
+# インデントを揃える
+Layout/IndentationConsistency:
+  Enabled: true
+
+# private宣言の前後に空行を入れる
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+# かっこの内側にスペースを入れない
+Layout/SpaceInsideParens:
+  Enabled: true
+
+# ブロックの{}の前後にスペースを入れる
+Layout/SpaceInsideBlockBraces:
+  Enabled: false
+
+# メソッド定義のメソッド名と引数リストの間にスペースを入れない
+Layout/SpaceAfterMethodName:
+  Enabled: true
+
+# コメントの#の後にはスペースを入れる
+Layout/LeadingCommentSpace:
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented # メソッドの長さに寄らず、毎回記述場所が同じになるので読みやすいのでは、という理由
+
+# オペレーターの前後にスペースを入れる
+Layout/SpaceAroundOperators:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+
+# ハッシュの{}の内側にスペースを入れる
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+# 不要なスペースを入れない
+Layout/TrailingWhitespace:
+  Enabled: true
+
+# []の内側にスペースを入れない
+Layout/SpaceInsideBrackets:
+  Enabled: true
+
+# ブロックの{}の前にスペースを入れる
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+# メソッドのデフォルト値の'='の前後にスペースを入れる
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+
+# カンマの後にスペースを入れる
+Layout/SpaceAfterComma:
+  Enabled: true
+
+# コロンの後にスペースを入れる
+Layout/SpaceAfterColon:
+  Enabled: true
+
+# 第一引数の間に1スペースを入れる
+# before_actionなどであえてスペースを入れて揃えたりすることがおるのでfalse
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
+# moduleの前後の余計な空行を許可しない
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+# メソッドの引数を複数行にした場合、インデントを揃える
+Layout/AlignParameters:
+  Enabled: true
+
+# コメントのインデントを正しくしなくてもよい
+Layout/CommentIndentation:
+  Enabled: false
+
+# メソッドの前後に余計な空行を入れない
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+# 複数行の条件式のインデントを揃える
+# 必ずしも揃えるべきでないところもあるためオフ
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+# インデントのサイズを揃える
+Layout/IndentationWidth:
+  Enabled: true
+
+# ハッシュのインデントを揃える
+Layout/IndentHash:
+  Enabled: true
+
+# 不要な改行を削除
+Layout/EmptyLines:
+  Enabled: true
+
+# 使用されていないブロック変数を消す
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+# メソッドチェインのドットは先頭に置く
+Layout/DotPosition:
+  Enabled: true
+
+# メソッドの第一引数のインデント
+Layout/FirstParameterIndentation:
+  Enabled: false
+
+### Performance
+Performance/CaseWhenSplat:
+  Enabled: false
+
+### Bundler
+# Gemfileのアルファベット順
+Bundler/OrderedGems:
+  Enabled: false
