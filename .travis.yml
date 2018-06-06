@@ -1,5 +1,7 @@
 language: ruby
 rvm: 2.5.1
+cache: bundler
+script: bundle exec rubocop
 deploy:
   provider: heroku
   api_key:
@@ -7,4 +9,3 @@ deploy:
   app: zenchanbot
   on:
     repo: zorori777/zenchan_bot
-cache: bundler
