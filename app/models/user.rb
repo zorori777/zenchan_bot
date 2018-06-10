@@ -3,4 +3,5 @@
 class User < ApplicationRecord
   has_many :plans, dependent: :destroy
   has_many :todos, dependent: :destroy
+  has_many :diaries, dependent: :destroy
 end
