@@ -7,6 +7,7 @@ Todo.seed do |s|
   s.url = "http://www.isejingu.or.jp/"
   s.caution = "白い蛇が出ます"
   s.eager_status = 2
+  s.executed_status = 1
   s.user_id = User.find_by(name: "浦飯幽助").id
 end
 
@@ -17,6 +18,7 @@ Todo.seed do |s|
   s.url = "http://www.sakurajima.gr.jp/"
   s.caution = "噴火に注意"
   s.eager_status = 4
+  s.executed_status = 0
   s.user_id = User.find_by(name: "浦飯幽助").id
 end
 
@@ -27,5 +29,6 @@ Todo.seed do |s|
   s.url = "https://magia.tokyo/"
   s.caution = nil
   s.eager_status = 5
+  s.executed_status = 0
   s.user_id = User.find_by(name: "コエンマ").id
 end
