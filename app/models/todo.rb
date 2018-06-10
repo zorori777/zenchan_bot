@@ -2,4 +2,6 @@
 
 class Todo < ApplicationRecord
   belongs_to :user
+  has_many   :todo_plans, dependent: :destroy
+  has_many   :plans, through: :todo_plans
 end
