@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_10_131922) do
+ActiveRecord::Schema.define(version: 2018_06_10_134121) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "image", null: false
@@ -20,10 +20,13 @@ ActiveRecord::Schema.define(version: 2018_06_10_131922) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "plancomments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "plan_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "impressions", null: false
+    t.integer "impressional_status", limit: 1, default: 0, null: false
+    t.bigint "plan_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_plan_comments_on_plan_id"
   end
 
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -68,6 +71,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_131922) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "plan_comments", "plans"
   add_foreign_key "plans", "users"
   add_foreign_key "todo_plans", "plans"
   add_foreign_key "todo_plans", "todos"
