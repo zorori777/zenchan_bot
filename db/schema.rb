@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_110042) do
     t.text "url"
     t.string "caution"
     t.integer "eager_status", limit: 1, default: 0, null: false
+    t.integer "executed_status", limit: 1, default: 0, null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
