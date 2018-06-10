@@ -3,9 +3,9 @@
 class CreateImages < ActiveRecord::Migration[5.2]
   def change
     create_table :images do |t|
-      t.text     :image
-      t.string   :imageable_type
-      t.integer  :imageable_id
+      t.text     :image, null: false
+      t.string   :imageable_type, null: false
+      t.integer  :imageable_id, null: false
 
       t.timestamps
     end
