@@ -8,6 +8,7 @@ class CreateTodos < ActiveRecord::Migration[5.2]
       t.text        :url
       t.string      :caution
       t.integer     :eager_status, null: false, default: 0, limit: 1
+      t.integer    :executed_status, null: false, default: 0, limit: 1
       t.references  :user, foreign_key: true
 
       t.timestamps
