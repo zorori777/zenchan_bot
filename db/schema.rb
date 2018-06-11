@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_10_143324) do
+ActiveRecord::Schema.define(version: 2018_06_10_144938) do
 
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2018_06_10_143324) do
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_diaries_on_title"
     t.index ["user_id"], name: "index_diaries_on_user_id"
+  end
+
+  create_table "diary_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "impressions", null: false
+    t.integer "impressional_status", limit: 1, default: 0, null: false
+    t.bigint "diary_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diary_id"], name: "index_diary_comments_on_diary_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,6 +100,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_143324) do
   end
 
   add_foreign_key "diaries", "users"
+  add_foreign_key "diary_comments", "diaries"
   add_foreign_key "plan_comments", "plans"
   add_foreign_key "plans", "users"
   add_foreign_key "todo_comments", "todos"
