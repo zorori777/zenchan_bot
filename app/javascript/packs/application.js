@@ -1,4 +1,4 @@
-// console.log('Hello World from Webpacker')
+import '../styles/base.scss';
 
 // Support component names relative to this directory:
 var componentRequireContext = require.context("components", true);
