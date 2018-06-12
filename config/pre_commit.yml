@@ -2,3 +2,6 @@
 :checks_remove: []
 :checks_add:
 - :rubocop
+:warnings_remove: []
+:warnings_add:
+- :jshint
