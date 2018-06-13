@@ -22,6 +22,9 @@ Rails/DynamicFindBy:
 Rails/FilePath:
   Enabled: false
 
+Rails/BulkChangeTable:
+  Enabled: false
+
 ### Metrics
 Metrics/AbcSize:
   Enabled: false
