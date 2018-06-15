@@ -1,0 +1,131 @@
+.contents {
+  max-width: 700px;
+  margin: 0 auto;
+
+}
+
+.contents__top {
+
+}
+
+.contents__top__card {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(110, 231, 110);
+  background:  #FFF;
+  border: solid 3px rgb(110, 231, 110);
+  border-radius: 10px;
+}
+
+.contents__bottom {
+}
+
+.contents__bottom__contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.contents__bottom__contents__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14em;
+}
+
+.contents__bottom__contents__logo-todo__btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.contents__bottom__contents__logo-plan__btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #FFCCFF	;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.contents__bottom__contents__logo-diary__btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #DBFF71;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.contents__bottom__contents__logo-image__btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #FF8856	;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.contents__bottom__contents__logo-todo__btn:active{
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.contents__bottom__contents__logo-image__btn:active{
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.contents__bottom__contents__logo-diary__btn:active{
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.contents__bottom__contents__logo-plan__btn:active{
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
