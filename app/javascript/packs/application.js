@@ -1,4 +1,4 @@
-import '../styles/base.scss';
+import '../styles/application.scss';
 
 // Support component names relative to this directory:
 var componentRequireContext = require.context("components", true);
