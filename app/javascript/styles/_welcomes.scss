@@ -1,11 +1,6 @@
 .contents {
   max-width: 700px;
   margin: 0 auto;
-
-}
-
-.contents__top {
-
 }
 
 .contents__top__card {
@@ -18,7 +13,28 @@
   border-radius: 10px;
 }
 
-.contents__bottom {
+.contents__top__card__title_time {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_place {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_plan-name {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_time-style {
+  display: flex;
+  & p {
+    color: black;
+    font-size: 1em;
+  }
+
+  & .contents__top__card__title__text {
+    margin-left: 40px;
+  }
 }
 
 .contents__bottom__contents {
@@ -34,98 +50,41 @@
   height: 14em;
 }
 
+@mixin menu_btn($backcolor) {
+  display: inline-block;
+  text-decoration: none;
+  background: $backcolor;
+  color:$white;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px $menu-btn-box-shadow;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+  &:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px $menu-btn-box-shadow-active;
+    border-bottom: none;
+  }
+}
+
 .contents__bottom__contents__logo-todo__btn {
-    display: inline-block;
-    text-decoration: none;
-    background: $aqua;
-    color:$white;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    border-radius: 50%;
-    box-shadow: 0px 2px 2px $box-shadow;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    transition: .4s;
+  @include menu_btn($aqua)
 }
 
 .contents__bottom__contents__logo-plan__btn {
-  display: inline-block;
-  text-decoration: none;
-  background: $light-pink	;
-  color: $white;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 2px $box-shadow;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  transition: .4s;
+  @include menu_btn($light-pink)
 }
 
 .contents__bottom__contents__logo-diary__btn {
-  display: inline-block;
-  text-decoration: none;
-  background: $light-aqua;
-  color: $white;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 2px $box-shadow;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  transition: .4s;
+  @include menu_btn($light-aqua)
 }
 
 .contents__bottom__contents__logo-image__btn {
-  display: inline-block;
-  text-decoration: none;
-  background: $orange;
-  color: $white;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 2px $box-shadow;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  transition: .4s;
-}
-
-.contents__bottom__contents__logo-todo__btn:active{
-  -ms-transform: translateY(2px);
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  border-bottom: none;
-}
-
-.contents__bottom__contents__logo-image__btn:active{
-  -ms-transform: translateY(2px);
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  border-bottom: none;
-}
-
-.contents__bottom__contents__logo-diary__btn:active{
-  -ms-transform: translateY(2px);
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  border-bottom: none;
-}
-
-.contents__bottom__contents__logo-plan__btn:active{
-  -ms-transform: translateY(2px);
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  border-bottom: none;
+  @include menu_btn($orange)
 }
