@@ -13,7 +13,7 @@
   margin: 2em 0;
   font-weight: bold;
   color: rgb(110, 231, 110);
-  background:  #FFF;
+  background: $white;
   border: solid 3px rgb(110, 231, 110);
   border-radius: 10px;
 }
@@ -37,13 +37,13 @@
 .contents__bottom__contents__logo-todo__btn {
     display: inline-block;
     text-decoration: none;
-    background: #87befd;
-    color: #FFF;
+    background: $aqua;
+    color:$white;
     width: 120px;
     height: 120px;
     line-height: 120px;
     border-radius: 50%;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 2px 2px $box-shadow;
     text-align: center;
     vertical-align: middle;
     overflow: hidden;
@@ -53,13 +53,13 @@
 .contents__bottom__contents__logo-plan__btn {
   display: inline-block;
   text-decoration: none;
-  background: #FFCCFF	;
-  color: #FFF;
+  background: $light-pink	;
+  color: $white;
   width: 120px;
   height: 120px;
   line-height: 120px;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 2px 2px $box-shadow;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
@@ -69,13 +69,13 @@
 .contents__bottom__contents__logo-diary__btn {
   display: inline-block;
   text-decoration: none;
-  background: #DBFF71;
-  color: #FFF;
+  background: $light-aqua;
+  color: $white;
   width: 120px;
   height: 120px;
   line-height: 120px;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 2px 2px $box-shadow;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
@@ -85,13 +85,13 @@
 .contents__bottom__contents__logo-image__btn {
   display: inline-block;
   text-decoration: none;
-  background: #FF8856	;
-  color: #FFF;
+  background: $orange;
+  color: $white;
   width: 120px;
   height: 120px;
   line-height: 120px;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 2px 2px $box-shadow;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
