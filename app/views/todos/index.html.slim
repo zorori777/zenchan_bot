@@ -1,2 +1,21 @@
-.contents
-  |  aa
+.container__todos
+  .container__todos__search
+    / 一旦仮置き
+    input[type="search" name="search" size="30" class="todo__container__search_layout" ]
+  .container__todos__search-selec-tag
+
+  .container__todos__contents
+    - @todos.each do |todo|
+      .container__todos__contents__user
+        = image_tag todo.user.image, class: 'container__todos__contents__user-img'
+      .container__todos__contents__box
+        .container__todos__contents__user-name
+          = todo.user.name
+        .container__todos__contents__title
+          h3
+            = todo.title
+        .container__todos__contents__img
+          = image_tag todo.image, class: 'container__todos__contents__img--layout'
+        .container__todos__contents__tags
+          .container__todos__contents__tags-comment
+          .container__todos__contents__tags-like

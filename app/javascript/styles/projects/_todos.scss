@@ -1,0 +1,29 @@
+.container__todos {
+  background: gray;
+}
+
+.container__todos__contents {
+  background: $white;
+  display: grid;
+  grid-template-columns: 0.2fr 2fr;
+  grid-gap: 20px;
+  padding: 12px;
+
+}
+
+.container__todos__contents__user-name {
+  margin-top: 12px;
+}
+
+.container__todos__contents__user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.container__todos__contents__img--layout {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
