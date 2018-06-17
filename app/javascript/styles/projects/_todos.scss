@@ -1,7 +1,23 @@
-.container__todos {
-  background: gray;
+.container__todos__search {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & .container__todos__search_layout {
+    height:50px;
+    border-radius:25px;
+    border:solid 3px $white;
+    outline: 0;
+    background: $white;
+    margin: 0  auto;
+    text-align: center;
+  }
 }
 
+.container__todos__search-selec-tag {
+  font-size: 2em;
+}
 .container__todos__contents {
   background: $white;
   display: grid;
