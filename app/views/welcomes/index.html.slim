@@ -26,8 +26,7 @@
       | Menu
     .contents__bottom__contents
       .contents__bottom__contents__logo
-        a.contents__bottom__contents__logo-todo__btn.btn:active[href="#"]
-          | やりたいこと
+        = link_to 'やりたいこと', todos_path, class: 'contents__bottom__contents__logo-todo__btn btn:active[href="#"]'
       .contents__bottom__contents__logo
         a.contents__bottom__contents__logo-plan__btn.btn:active[href="#"]
           | プランを作成
