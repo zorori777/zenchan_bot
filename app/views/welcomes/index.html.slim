@@ -1,0 +1,38 @@
+.contents
+  .contents__top
+    .contents__top__title
+      h2
+        | Next Plan
+    .contents__top__card
+      .contents__top__card_titles
+        .contents__top__card__title_time
+          p
+            | 開催日時
+          p.contents__top__card__title__text
+            | 2018/07/07 17:00
+        .contents__top__card__title_plan-name
+          p
+            | プラン名
+          p.contents__top__card__title__text
+            | わたさんの誕生日
+        .contents__top__card__title_place
+          p
+            | 集合場所
+          p.contents__top__card__title__text
+            | 恵比寿ガーデンプレイス
+  .contents__bottom
+    .contents__bottom__title
+    h2
+      | Menu
+    .contents__bottom__contents
+      .contents__bottom__contents__logo
+        = link_to 'やりたいこと', todos_path, class: 'contents__bottom__contents__logo-todo__btn btn:active[href="#"]'
+      .contents__bottom__contents__logo
+        a.contents__bottom__contents__logo-plan__btn.btn:active[href="#"]
+          | プランを作成
+      .contents__bottom__contents__logo
+        a.contents__bottom__contents__logo-diary__btn.btn:active[href="#"]
+          | 日記
+      .contents__bottom__contents__logo
+        a.contents__bottom__contents__logo-image__btn.btn:active[href="#"]
+          | 写真

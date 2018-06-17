@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title
+      | ZenchanBot
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+  body
+    p.notice
+      = notice
+    p.alert
+      = alert
+    header
+      div
+        | header であるぞよ
+    = yield
