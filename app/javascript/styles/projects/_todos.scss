@@ -26,4 +26,29 @@
   width: 90%;
   height: 90%;
   object-fit: cover;
+  border-radius: 1.5%;
+}
+
+.container__todos__contents__tags {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  font-size: 1.1rem;
+}
+
+.container__todos__contents__tags-comment {
+  display: flex;
+  font-size: 1.1rem;
+
+  & .container__todos__contents__tags-comment-count {
+    padding-top: 2px;
+  }
+}
+
+.container__todos__contents__tags-like {
+  display: flex;
+  font-size: 1.1rem;
+
+  & .container__todos__contents__tags-like-icon-count {
+    padding-top: 2px;
+  }
 }
