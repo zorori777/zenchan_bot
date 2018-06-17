@@ -1,0 +1,90 @@
+.contents__top__card {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(110, 231, 110);
+  background: $white;
+  border: solid 3px rgb(110, 231, 110);
+  border-radius: 10px;
+}
+
+.contents__top__card__title_time {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_place {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_plan-name {
+  @extend .contents__top__card__title_time-style;
+}
+
+.contents__top__card__title_time-style {
+  display: flex;
+  & p {
+    color: black;
+    font-size: 1rem;
+  }
+
+  & .contents__top__card__title__text {
+    margin-left: 40px;
+  }
+}
+
+.contents__bottom {
+}
+
+.contents__bottom__contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: repeat(2, 1fr);
+  background: $white;
+  border-radius: 1%;
+}
+
+.contents__bottom__contents__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14em;
+}
+
+@mixin menu_btn($backcolor) {
+  display: inline-block;
+  text-decoration: none;
+  background: $backcolor;
+  color:$white;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px $menu-btn-box-shadow;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+  &:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px $menu-btn-box-shadow-active;
+    border-bottom: none;
+  }
+}
+
+.contents__bottom__contents__logo-todo__btn {
+  @include menu_btn($aqua)
+}
+
+.contents__bottom__contents__logo-plan__btn {
+  @include menu_btn($deep-pink)
+}
+
+.contents__bottom__contents__logo-diary__btn {
+  @include menu_btn($light-green)
+}
+
+.contents__bottom__contents__logo-image__btn {
+  @include menu_btn($orange)
+}
