@@ -1,10 +1,10 @@
-.container__todos__search {
+.container__todos__main-functions {
   margin: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  & .container__todos__search_layout {
+  & .container__todos__main-functions__search_layout {
     height:50px;
     border-radius:25px;
     border:solid 3px $white;
@@ -15,9 +15,16 @@
   }
 }
 
-.container__todos__search-selec-tag {
+.container__todos__main-functions-plus {
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+.container__todos__main-functions__search-selec-tag {
   font-size: 2em;
 }
+
+
 .container__todos__contents {
   background: $white;
   display: grid;
