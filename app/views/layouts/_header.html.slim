@@ -2,7 +2,8 @@ nav.level
   .level-left
     .navbar-brand
       / 一旦仮
-      h1 Zenchan
+      = link_to root_path do
+        h1 Zenchan
   .level-right
     - if user_signed_in?
       .dropdown.is-hoverable
