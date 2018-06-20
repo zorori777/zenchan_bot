@@ -1,5 +1,5 @@
 @import '~bulma/bulma';
-@import './commons/variables.scss';
-@import './commons/base.scss';
-@import './projects/welcomes.scss';
-@import './projects/todos.scss';
+@import './foundation/variables.scss';
+@import './object/project/welcomes.scss';
+@import './object/project/todos.scss';
+@import './object/utility/border.scss';

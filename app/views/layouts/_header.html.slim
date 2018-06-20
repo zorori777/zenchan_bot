@@ -1,0 +1,24 @@
+nav.level
+  .level-left
+    .navbar-brand
+      / 一旦仮
+      = link_to root_path do
+        h1 Zenchan
+  .level-right
+    - if user_signed_in?
+      .dropdown.is-hoverable
+        .dropdown-trigger
+          figure.level-item.image.is-64x64
+            = image_tag current_user.image, class: 'u-br50'
+        #dropdown-menu4.dropdown-menu[role="menu"]
+          .dropdown-content
+            .dropdown-item
+              = link_to "詳細", "#"
+            hr.dropdown-divider
+            .dropdown-item
+              = link_to "ログアウト", "#"
+    - else
+      a.level-item.button.is-primary.is-rounded
+        | ログイン
+      a.level-item.button.is-primary.is-rounded
+        | サインアップ
