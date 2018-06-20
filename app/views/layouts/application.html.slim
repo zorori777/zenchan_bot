@@ -8,11 +8,10 @@ html
     = stylesheet_pack_tag 'application'
     = javascript_pack_tag 'application'
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
-    header
-      div
-        | header であるぞよ
-    = yield
+    .container.is-widescreen
+      p.notice
+        = notice
+      p.alert
+        = alert
+      = render 'layouts/header'
+      = yield
