@@ -7,8 +7,8 @@ nav.level
     - if user_signed_in?
       .dropdown.is-hoverable
         .dropdown-trigger
-          figure.level-item.image.is-48x48
-            = image_tag current_user.image
+          figure.level-item.image.is-64x64
+            = image_tag current_user.image, class: 'u-br50'
         #dropdown-menu4.dropdown-menu[role="menu"]
           .dropdown-content
             .dropdown-item
