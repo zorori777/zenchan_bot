@@ -1,6 +1,9 @@
 language: ruby
 rvm: 2.5.1
-cache: bundler
+cache:
+  directories:
+  - vendor/bundle
+install: bundle install --without production --deployment
 script: bundle exec rubocop
 deploy:
   provider: heroku
