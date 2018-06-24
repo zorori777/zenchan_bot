@@ -4,8 +4,8 @@
     input[type="search" name="search" size="30" placeholder="キーワードを入力" class="container__todos__main-functions__search_layout"]
     .container__todos__main-functions-plus
       i.fas.fa-plus
-    .container__todos__main-functions__search-selec-tag
-      i.fas.fa-caret-down
+  / .container__todos__main-functions__search-selec-tag
+  /   i.fas.fa-caret-down
   .columns
     .column
       - @todos.each do |todo|
@@ -19,8 +19,13 @@
                 figure.image.is-48x48
                   = image_tag todo.user.image, class: "u-br50"
               .media-content
-                p.title.is-6
-                  = todo.user.name
+                .columns
+                  .column.u-fx-align-center
+                    p.title.is-6
+                      = todo.user.name
+                  .column.has-text-right
+                    span.icon.is-medium
+                      i.fas.fa-lg.fa-bars
                 p.subtitle.is-6
                   = todo.title
                 nav.level.is-mobile
