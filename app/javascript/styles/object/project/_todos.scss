@@ -5,11 +5,11 @@
   flex-wrap: wrap;
 
   & .container__todos__main-functions__search_layout {
-    height:50px;
-    border-radius:25px;
-    border:solid 3px $white;
+    height: 50px;
+    width: 50%;
+    border-radius: 25px;
     outline: 0;
-    background: $white;
+    background: has-text-primary;
     margin: 0  auto;
     text-align: center;
   }

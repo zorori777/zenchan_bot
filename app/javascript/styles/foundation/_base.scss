@@ -5,3 +5,7 @@ input {
 input:focus {
  border: solid 3px $light-green;
 }
+
+.width50 {
+  width: 50% !important;
+}
