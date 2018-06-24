@@ -6,27 +6,30 @@
       i.fas.fa-plus
     .container__todos__main-functions__search-selec-tag
       i.fas.fa-caret-down
-
-  .container__todos__contents
-    - @todos.each do |todo|
-      .container__todos__contents__user
-        = image_tag todo.user.image, class: 'container__todos__contents__user-img'
-      .container__todos__contents__box
-        .container__todos__contents__user-name
-          = todo.user.name
-        .container__todos__contents__title
-          h3
-            = todo.title
-        .container__todos__contents__img
-          = image_tag todo.image, class: 'container__todos__contents__img--layout'
-        .container__todos__contents__tags
-          .container__todos__contents__tags-comment
-            .container__todos__contents__tags-comment-icon
-              i.far.fa-comments
-            .container__todos__contents__tags-comment-count
-              | 1
-          .container__todos__contents__tags-like
-            .container__todos__contents__tags-like-icon
-              i.far.fa-star
-            .container__todos__contents__tags-like-icon-count
-              | 12
+  .columns
+    .column
+      - @todos.each do |todo|
+        .card.width50.u-m-c.u-p1
+          .card-image
+            figure.image.is-256x256
+              = image_tag todo.image, class: "u-br40p"
+          .card-content
+            .media
+              .media-left
+                figure.image.is-48x48
+                  = image_tag todo.user.image, class: "u-br50"
+              .media-content
+                p.title.is-6
+                  = todo.user.name
+                p.subtitle.is-6
+                  = todo.title
+                nav.level.is-mobile
+                  .level-left
+                    a.level-item[aria-label="reply"]
+                      span.icon
+                        i.far.fa-comments
+                    a.level-item[aria-label="like"]
+                      span.icon
+                        i.far.fa-star
+                      span
+                        | 13
