@@ -1,0 +1,15 @@
+.c-btn-circle {
+  display: inline-block;
+  text-decoration: none;
+  background: $aqua;
+  color:$white;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px $menu-btn-box-shadow;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
