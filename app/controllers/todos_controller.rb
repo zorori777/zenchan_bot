@@ -2,7 +2,7 @@
 
 class TodosController < ApplicationController
   def index
-    @todos = Todo.preload(:user).all
+    @todos = Todo.preload(:user).with_preloaded_image.all
   end
 
   def new

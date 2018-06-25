@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Todo < ApplicationRecord
+  scope :with_preloaded_image, -> { preload(image_attachment: :blob) }
+
   enum eager_status: { "とりあえず": 0, "興味あり": 1, "絶対行く": 2 }
 
   belongs_to :user
