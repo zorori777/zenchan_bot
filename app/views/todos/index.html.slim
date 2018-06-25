@@ -9,9 +9,10 @@
     .column
       - @todos.each do |todo|
         .card.width50.u-m-c.u-p1
-          .card-image
-            figure.image.is-256x256
-              = image_tag todo.image, class: "u-br40p"
+          - if todo.image.attached?
+            .card-image
+              figure.image.is-256x256
+                = image_tag todo.image , class: "u-br40p"
           .card-content
             .media
               .media-left
