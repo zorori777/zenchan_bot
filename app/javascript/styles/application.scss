@@ -1,8 +1,11 @@
 @import '~bulma/bulma';
 @import './foundation/variables.scss';
+@import './foundation/base.scss';
 @import './object/component/button.scss';
 @import './object/project/todos.scss';
 @import './object/utility/border.scss';
 @import './object/utility/text.scss';
 @import './object/utility/color.scss';
 @import './object/utility/margin.scss';
+@import './object/utility/padding.scss';
+@import './object/utility/display.scss';
