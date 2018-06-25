@@ -3,7 +3,8 @@
     / 一旦仮置き
     input[type="search" name="search" size="30" placeholder="キーワードを入力" class="container__todos__main-functions__search_layout"]
     .container__todos__main-functions-plus
-      i.fas.fa-plus
+       = link_to new_todo_path do
+        i.fas.fa-plus
   .columns
     .column
       - @todos.each do |todo|
