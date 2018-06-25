@@ -4,7 +4,9 @@ cache:
   directories:
   - vendor/bundle
 install: bundle install --without production --deployment
-script: bundle exec rubocop
+script:
+  - bundle exec rubocop
+  - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
