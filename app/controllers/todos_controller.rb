@@ -12,9 +12,9 @@ class TodosController < ApplicationController
   def create
     @todo = current_user.todos.new(create_params)
     if @todo.save
-      redirect_to todos_path, notice: "作成されました"
+      redirect_to todos_path, notice: "作成しました"
     else
-      flash.now[:alert] = "作成を失敗しました "
+      flash.now[:alert] = "作成できませんでした"
       render :new
     end
   end
