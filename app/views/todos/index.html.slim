@@ -4,8 +4,6 @@
     input[type="search" name="search" size="30" placeholder="キーワードを入力" class="container__todos__main-functions__search_layout"]
     .container__todos__main-functions-plus
       i.fas.fa-plus
-  / .container__todos__main-functions__search-selec-tag
-  /   i.fas.fa-caret-down
   .columns
     .column
       - @todos.each do |todo|
@@ -24,8 +22,20 @@
                     p.title.is-6
                       = todo.user.name
                   .column.has-text-right
-                    span.icon.is-medium
-                      i.fas.fa-lg.fa-bars
+                    .dropdown.is-hoverable
+                      .dropdown-trigger
+                        span.icon.is-medium
+                          i.fas.fa-lg.fa-bars
+                      #dropdown-menu4.dropdown-menu[role="menu"]
+                        .dropdown-content.has-text-left
+                          .dropdown-item
+                            = link_to "詳細", "#"
+                          hr.dropdown-divider
+                          .dropdown-item
+                            = link_to "編集", "#"
+                          hr.dropdown-divider
+                          .dropdown-item
+                            = link_to "削除", "#"
                 p.subtitle.is-6
                   = todo.title
                 nav.level.is-mobile
