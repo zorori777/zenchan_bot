@@ -4,7 +4,6 @@ class CreateTodos < ActiveRecord::Migration[5.2]
   def change
     create_table :todos do |t|
       t.string      :title, null: false
-      t.text        :image
       t.text        :url
       t.string      :caution
       t.integer     :eager_status, null: false, default: 0, limit: 1
