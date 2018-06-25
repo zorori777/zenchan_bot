@@ -3,14 +3,16 @@
     / 一旦仮置き
     input[type="search" name="search" size="30" placeholder="キーワードを入力" class="container__todos__main-functions__search_layout"]
     .container__todos__main-functions-plus
-      i.fas.fa-plus
+       = link_to new_todo_path do
+        i.fas.fa-plus
   .columns
     .column
       - @todos.each do |todo|
         .card.width50.u-m-c.u-p1
-          .card-image
-            figure.image.is-256x256
-              = image_tag todo.image, class: "u-br40p"
+          - if todo.image.attached?
+            .card-image
+              figure.image.is-256x256
+                = image_tag todo.image , class: "u-br40p"
           .card-content
             .media
               .media-left
