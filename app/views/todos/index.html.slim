@@ -20,8 +20,7 @@
               | 未完了
   .column
     .control
-      button.button.is-primary
-        | NEW
+      = link_to "作成", new_todo_path, class: 'button is-link'
 
 .columns
   .column
