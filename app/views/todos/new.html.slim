@@ -23,7 +23,7 @@
               span.file-label
                 |  Choose a file…
     .field
-      = f.label :eager_status, class: "label"
+      = f.label "やる気", class: "label"
       .control
         = f.select :eager_status, Todo.eager_statuses.keys.to_a, {}
     .field
