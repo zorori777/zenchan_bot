@@ -1,7 +1,0 @@
-ja:
-  activerecord:
-    attributes:
-      todo:
-        title: 'タイトル'
-        caution: '注意点'
-        eager_status: 'やる気'
