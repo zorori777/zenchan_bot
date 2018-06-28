@@ -23,6 +23,16 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
   end
 
+  def update
+    @todo = Todo.find(params[:id])
+    if @todo.update(create_params)
+      redirect_to todos_path, notice: "編集しました"
+    else
+      flash.now[:alert] = "編集できませんでした"
+      render :edit
+    end
+  end
+
   private
 
   def create_params
