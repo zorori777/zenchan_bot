@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TodosController < ApplicationController
+  before_action :set_todo, only: %i[edit update]
+
   def index
     @todos = Todo.preload(:user).with_preloaded_image.all
   end
@@ -12,24 +14,20 @@ class TodosController < ApplicationController
   def create
     @todo = current_user.todos.new(create_params)
     if @todo.save
-      redirect_to todos_path, notice: "作成しました"
+      redirect_path_and_message(todos_path, "作成しました")
     else
-      flash.now[:alert] = "作成できませんでした"
-      render :new
+      flash_message_and_render("作成できませんでした", :new)
     end
   end
 
   def edit
-    @todo = Todo.find(params[:id])
   end
 
   def update
-    @todo = Todo.find(params[:id])
     if @todo.update(create_params)
-      redirect_to todos_path, notice: "編集しました"
+      redirect_path_and_message(todos_path, "編集しました")
     else
-      flash.now[:alert] = "編集できませんでした"
-      render :edit
+      flash_message_and_render("編集できませんでした", :edit)
     end
   end
 
@@ -43,5 +41,9 @@ class TodosController < ApplicationController
       :image,
       :eager_status
     )
+  end
+
+  def set_todo
+    @todo = Todo.find(params[:id])
   end
 end
