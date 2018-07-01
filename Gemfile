@@ -22,6 +22,9 @@ gem 'travis'
 # Login Logout
 gem 'devise'
 
+# decorator
+gem 'draper'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # For debug
