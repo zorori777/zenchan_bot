@@ -56,7 +56,7 @@
                           = link_to "編集", edit_todo_path(todo)
                         hr.dropdown-divider
                         .dropdown-item
-                          = link_to "削除", "#"
+                          = link_to "削除", todo_path(todo), method: :delete, data: { confirm: '削除していいですか？' }
               p.subtitle.is-6
                   = link_to_if(todo.decorate.url_present?, todo.title, todo.url)
               nav.level.is-mobile

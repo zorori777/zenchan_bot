@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TodosController < ApplicationController
-  before_action :set_todo, only: %i[edit update]
+  before_action :set_todo, only: %i[edit update destroy]
 
   def index
     @todos = Todo.preload(:user).with_preloaded_image.all
@@ -29,6 +29,11 @@ class TodosController < ApplicationController
     else
       flash_message_and_render("編集できませんでした", :edit)
     end
+  end
+
+  def destroy
+    @todo.destroy
+    redirect_path_and_message(todos_path, "削除しました")
   end
 
   private
