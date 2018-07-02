@@ -1,0 +1,26 @@
+.field
+  = f.label :title, class: "label"
+  .control
+    = f.text_field :title, class: "input", placeholder: "カツ丼食べたい！"
+.field
+  = f.label :url, class: "label"
+  .control
+    = f.text_field :url, class: "input", placeholder: "http://watasan.com/"
+.field
+  = f.label :caution, class: "label"
+  .control
+    = f.text_field :caution, class: "input", placeholder: "毎週水曜日は休み"
+.field
+  = f.label :image, class: "label"
+  .control
+      label.file-label
+        = f.file_field :image, class: "file-input"
+        span.file-cta
+          span.file-icon
+            i.fas.fa-upload
+          span.file-label
+            |  Choose a file…
+.field
+  = f.label "やる気", class: "label"
+  .control
+    = f.select :eager_status, Todo.eager_statuses.keys.to_a, {}
