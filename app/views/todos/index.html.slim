@@ -58,7 +58,7 @@
                         .dropdown-item
                           = link_to "削除", "#"
               p.subtitle.is-6
-                = todo.title
+                  = link_to_if(todo.decorate.url_present?, todo.title, todo.url)
               nav.level.is-mobile
                 .level-left
                   a.level-item[aria-label="reply"]
